@@ -10,6 +10,7 @@ packages = [{ include = "mkdocstrings_handlers" }]
 exclude = [
     "mkdocstrings_handlers/javascript/node_modules/**",
     "mkdocstrings_handlers/javascript/package-lock.json",
+    "mkdocstrings_handlers/javascript/yarn.lock",
 ]
 
 [tool.poetry.urls]
@@ -17,12 +18,13 @@ exclude = [
 [tool.poetry.dependencies]
 python = "^3.7"
 mkdocstrings = "^0.19.0"
-typer = {extras = ["all"], version = "^0.6.1"}
+typer = { extras = ["all"], version = "^0.6.1" }
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
 isort = "^5.10.1"
 pytest = "^7.1.2"
+mypy = "^0.971"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -228,6 +228,25 @@ python = ["mkdocstrings-python (>=0.5.2)"]
 python-legacy = ["mkdocstrings-python-legacy (>=0.2.1)"]
 
 [[package]]
+name = "mypy"
+version = "0.971"
+description = "Optional static typing for Python"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+mypy-extensions = ">=0.4.3"
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+typed-ast = {version = ">=1.4.0,<2", markers = "python_version < \"3.8\""}
+typing-extensions = ">=3.10"
+
+[package.extras]
+dmypy = ["psutil (>=4.0)"]
+python2 = ["typed-ast (>=1.4.0,<2)"]
+reports = ["lxml"]
+
+[[package]]
 name = "mypy-extensions"
 version = "0.4.3"
 description = "Experimental type system extensions for programs checked with the mypy typechecker."
@@ -476,7 +495,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "7a792184539678f9017986dc6d704d58ecf3a73227b6f7f32ed3dbb2a775b2a6"
+content-hash = "eae58e3a458deb5aa4f06b637db8adc63c2963bfb5c63078e6aa33a271ccb7d9"
 
 [metadata.files]
 atomicwrites = []
@@ -535,6 +554,7 @@ mergedeep = []
 mkdocs = []
 mkdocs-autorefs = []
 mkdocstrings = []
+mypy = []
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
