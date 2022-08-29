@@ -1,4 +1,3 @@
-from typing import Any, Dict
 from mkdocstrings.handlers.base import BaseHandler
 
 
